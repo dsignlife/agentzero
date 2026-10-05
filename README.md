@@ -1,33 +1,90 @@
-# Agent template
+# Director agent project
 
-This repository is a starting point for projects using Codex or OpenClaude, with shared instructions, tools, knowledge, and memory.
+The Director is a task planner and coordinator for Codex or OpenClaude. It understands your goals, thinks through solutions, gives specialists clear instructions, consumes their results, and decides what happens next. It coordinates coding agents, Blender 3D agents, and personal assistants.
 
-## Initialize a project
+## Responsibilities and workflow
+
+1. Clarify the outcome, constraints, and completion criteria. Ask focused questions when missing information changes the plan.
+2. Compare approaches and recommend a practical solution.
+3. Break the solution into bounded tasks, identify dependencies, and sequence the work.
+4. Give each specialist an [assignment brief](roles/README.md) with the objective, relevant context, ownership, recommended steps, limits, deliverables, and acceptance checks.
+5. Dispatch through actual runner tools when available. Track assignments and dependencies in [short-term memory](memory/shorterm/README.md).
+6. Inspect returned artifacts and verification evidence. Accept the result, request corrections, gather more information, or assign the next task.
+7. Update the plan and report accepted results, blockers, and the next action. Finish when the requested outcome and relevant checks are satisfied.
+
+The Director delegates substantial coding, modeling, and specialist production. It may inspect artifacts, perform suitable verification, and edit planning, coordination, and documentation itself. It works autonomously within your authorized scope and asks when an action exceeds that scope. A specialist assignment does not grant additional access or permission.
+
+If delegation is unavailable, the Director prepares a ready-to-send brief marked `awaiting dispatch`. A returned completion claim remains subject to review; required checks that cannot be performed stay explicitly unverified.
+
+## Setup and available capabilities
+
+Open the repository root in your chosen runner and ask it to read [AGENTS.md](AGENTS.md). OpenClaude's [CLAUDE.md](CLAUDE.md) adapter references those shared instructions. Confirm tool access, specialist workspaces, and return channels before dispatching tasks.
+
+The [tool inventory](tools/README.md) records the initialization observations and remaining checks. Codex and Git were found on PATH; OpenClaude and Blender were not found on PATH. Coordination tools were exposed in the initialization session, but no persistent specialist registrations or Blender connection were established. These observations must be rechecked in future sessions.
+
+The MCP example is empty, six Codex skills are present in `.codex/skills/`, and the local OpenClaude skills folder remains an empty scaffold. No executable repository utilities or automated evaluator are installed. This repository does not provision specialist applications or personal-assistant accounts. Configure missing capabilities only under a separate request; documentation alone does not make them available.
+
+## Skills the Director uses
+
+Select skills by their declared task triggers. Use the runner's skill catalog first; if a repo skill is absent from discovery, locate its file explicitly. Read the selected `SKILL.md` before acting, announce its use, and follow its instructions. Read supporting references or run helpers only when the selected workflow requires them. This follows [official OpenAI guidance on skill selection](https://learn.chatgpt.com/docs/build-skills).
+
+| Skill | Use when |
+| --- | --- |
+| [writing-plans](.codex/skills/writing-plans/SKILL.md) | A specification or requirements need a multi-step implementation plan before coding begins. The Director can prepare the plan for a coding specialist. |
+| [planning-with-files](.codex/skills/planning-with-files/SKILL.md) | Research or substantial work needs persistent planning, including work requiring five or more tool calls. Follow its selected task-directory and recovery workflow. |
+| [multi-agent-patterns](.codex/skills/multi-agent-patterns/SKILL.md) | Designing coordination, context isolation, explicit handoffs, or parallel execution, or deciding whether multiple agents are justified. |
+| [verification-before-completion](.codex/skills/verification-before-completion/SKILL.md) | Before claiming work is complete, fixed, or passing, or preparing a commit or PR. Run suitable checks and inspect fresh evidence. |
+| [advanced-evaluation](.codex/skills/advanced-evaluation/SKILL.md) | Designing LLM-as-judge evaluation, scoring, comparisons, rubric calibration, bias mitigation, or automated quality assessment. |
+| [memory-systems](.codex/skills/memory-systems/SKILL.md) | Designing persistent semantic memory, entity tracking, temporal validity, graph or vector retrieval, consolidation, or memory benchmarks. Ordinary task notes follow the memory README. |
+
+Include relevant skill paths in specialist briefs and confirm the receiving runner can access them. The six repo skills are exposed in the current Codex session; recheck discovery when changing runners or sessions. A local skill does not establish external tool access, and hook support depends on the runner.
+
+When `planning-with-files` owns a task, use its selected planning files as the current plan. Link that directory from short-term memory when a handoff needs it; avoid maintaining a second authoritative copy of the plan.
+
+## Example requests
+
+- "Compare approaches for adding a feature, then prepare a coding-agent brief with implementation steps and acceptance checks."
+- "Plan a Blender asset from this reference. Specify the scene requirements, export formats, and review evidence for the 3D agent."
+- "Break my research goal into personal-assistant tasks and identify the sources and access each task needs."
+- "Review these specialist results, identify missing evidence, and decide what should happen next."
+- "Resume this task from memory and tell me the current blocker and next assignment."
+
+## Initialize or revise the Director project
 
 1. Clone or copy this template into your project repository.
 2. Start Codex or OpenClaude with the project root as its working directory.
-3. Copy the first prompt below, replace the bracketed values with your project brief, and send it to the agent. The examples show how to describe a coding agent or a Blender 3D agent.
+3. Copy the first prompt below, replace bracketed values with your coordination needs, and send it to the agent. The later examples illustrate specialist briefs; they do not change the Director's primary role.
 4. Review the edited documentation. It should describe the assigned role, its responsibilities, its boundaries, and the tools actually available for the project. Resolve any setup blockers the agent reports before starting work that depends on them.
 
-Initialization specializes the repository's documentation. It does not by itself install tools, connect MCP servers, or complete the first coding or modeling task.
+Initialization specializes the Director's documentation. It does not by itself install tools, connect MCP servers, dispatch specialists, or complete a production task.
 
 ### First prompt
 
 ```text
-Initialize this repository for the following project and agent role.
+Initialize or revise this repository as a Director agent project.
 
 Project name: [Name]
-Agent role: [For example, coding agent or Blender 3D agent]
-Purpose: [What this agent helps me accomplish]
-Responsibilities: [Tasks and outcomes the agent owns]
+Agent role: Director, task planner, and coordinator
+Purpose: [Goals and domains this Director helps me coordinate]
+Responsibilities: Compare solutions, plan tasks, instruct specialists,
+review their results, maintain task state, and decide the next action.
 Boundaries: [What is in scope, what is outside its role, and which actions need my approval]
 Runner and tools: [Codex or OpenClaude; tools available or still needed]
-Deliverables: [Expected files, formats, and destinations]
+Specialists: [Coding, Blender 3D, personal assistants, or others needed]
+Deliverables: [Expected plans, briefs, review results, and destinations]
 Success checks: [How completed work should be checked]
 
 Read AGENTS.md first, then inspect the existing repository and README files.
 Use this brief to specialize the documentation, preserving useful shared
 guidance and existing project content.
+
+Delegate substantial production work. Use actual runner coordination tools;
+if unavailable, mark prepared briefs as awaiting dispatch. Review evidence
+before accepting returned work. Stay within my authorized scope.
+
+Use the installed Codex skills when their triggers match. Read the selected
+SKILL.md before acting and include relevant skill paths in specialist briefs.
+Keep the skill routing table and capability inventory current.
 
 1. Update the root README.md with the project's purpose, the agent's role,
    responsibilities, boundaries, setup requirements, and example requests.
@@ -62,9 +119,9 @@ Otherwise proceed with the documentation edits, state your assumptions, and
 report the changed files and any remaining setup blockers.
 ```
 
-### Example brief: coding agent
+### Example specialist brief: coding agent
 
-Use these values in the first prompt and adjust them for your project:
+Adapt these values into the assignment format in roles/README.md, adding task-specific context, ownership, dependencies, steps, and a return channel:
 
 ```text
 Project name: My application
@@ -77,7 +134,7 @@ Deliverables: Source changes and relevant documentation in their project locatio
 Success checks: Relevant tests, formatting and lint checks, and a build when applicable. Report checks that cannot be run.
 ```
 
-### Example brief: Blender 3D agent
+### Example specialist brief: Blender 3D agent
 
 ```text
 Project name: My 3D asset studio
@@ -92,13 +149,13 @@ Success checks: Inspect the scene and a preview render; check dimensions, scale,
 
 ## README files to customize
 
-During initialization, the agent should customize these README files for its assigned role. After setup, update them when their part of the project changes.
+These README files describe the Director's role and supporting workflows. When revising setup, keep them consistent with the actual responsibilities and available capabilities.
 
 | README file | When to edit | What to document |
 | --- | --- | --- |
-| [README.md](README.md) | For every new project | Replace the template introduction with the project name, purpose, prerequisites, setup steps for the chosen runner, and examples of how to use the project. Keep this list aligned with the project's README files. |
-| [tools/README.md](tools/README.md) | When adding or changing shared tools | List available tools, their purpose, dependencies, inputs, outputs, and commands to run them. Link to detailed documentation beside each tool. |
-| [roles/README.md](roles/README.md) | When defining specialist roles | List the roles, their responsibilities, and links to their definitions. Explain how the chosen runner invokes them. |
+| [README.md](README.md) | When the Director's scope or setup changes | Maintain the purpose, boundaries, workflow, setup requirements, example requests, and README list. |
+| [tools/README.md](tools/README.md) | When capabilities change | Update the verified tool inventory, delegation method, prerequisites, and remaining setup checks. |
+| [roles/README.md](roles/README.md) | When responsibilities or handoffs change | Maintain Director and specialist responsibilities, assignment instructions, return evidence, and result review. |
 | [memory/README.md](memory/README.md) | When changing how project memory is used | Explain how agents find, read, update, and maintain memory across sessions. |
 | [memory/shorterm/README.md](memory/shorterm/README.md) | When changing task handoffs | Describe active task records, required context, and cleanup after completion. |
 | [memory/longterm/README.md](memory/longterm/README.md) | When changing durable project memory | Describe which confirmed decisions to retain, supporting evidence, and review triggers. |

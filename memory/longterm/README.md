@@ -1,8 +1,10 @@
 # Long-term memory
 
-Use this folder for project context that remains useful across tasks: confirmed decisions, constraints, conventions, and user preferences relevant to this project. Follow the shared [memory guidance](../README.md).
+Use this folder for Director context that remains useful across tasks: confirmed preferences, project decisions, scope boundaries, and established coordination conventions. Follow the shared [memory guidance](../README.md).
 
 Read matching notes when a task depends on an earlier decision. Write or update a note when a durable decision is confirmed. Do not turn a temporary assumption into an established fact.
+
+Examples include an agreed artifact destination, a confirmed specialist workspace, or a user-approved decision about which work the Director owns. Record available integrations only after verification, with a review trigger; a capability observed in one session is not a permanent guarantee. Keep active assignments and blockers in short-term memory.
 
 Use a descriptive filename such as `runner-selection.md` and include:
 
