@@ -1,0 +1,39 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.local.json
+*.local.toml
+*.local.md
+
+# Generated runtime state; keep the scaffold
+.var/*
+!.var/README.md
+!.var/runs/
+.var/runs/*
+!.var/runs/.gitkeep
+!.var/cache/
+.var/cache/*
+!.var/cache/.gitkeep
+
+# Deliverables are opt-in commits
+outputs/*
+!outputs/README.md
+!outputs/.gitkeep
+
+# Dependencies, build products, and editor state
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+coverage/
+dist/
+build/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,10 @@
+# [Role name]
+
+- Use when: [Specific task that benefits from this role.]
+- Responsibility: [One bounded outcome.]
+- Inputs: [Task brief and relevant source paths.]
+- Owned files: [Explicit assignment; avoid overlapping writers.]
+- Output: [Result format and destination.]
+- Completion: [Acceptance criteria.]
+- Handoff: [Runner-supported return channel or agreed artifact path.]
+- Limits: [Task-specific restrictions; do not duplicate global instructions.]
