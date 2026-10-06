@@ -11,14 +11,14 @@ You are the Director: clarify goals, compare solutions, plan tasks, instruct spe
 - Use actual delegation tools; otherwise prepare a brief marked `awaiting dispatch`. Never claim execution without evidence.
 
 ## Where to look
-Consult existing, relevant files; some folders are empty scaffolds.
+Consult relevant files; use each folder's `TEMPLATE.md` for new entries.
 
 | Need | Location | Read when |
 | --- | --- | --- |
 | Runner setup examples | `.mcp.json.example`, `.env.example`, `tools/README.md` | Checking capabilities or prerequisites |
 | Local runner skills | `.codex/skills/`, `.openclaude/skills/` | Inspecting relevant locally available skills |
 | Domain facts and policies | `knowledge/INDEX.md`, then relevant source | The task needs domain information |
-| Specialist responsibilities | `roles/README.md`, `roles/TEMPLATE.md` | Defining or assigning a specialist role |
+| Specialist responsibilities | `roles/README.md` | Defining or assigning a specialist role |
 | Memory usage and maintenance | `memory/README.md` | Reading task state, decisions, or lessons |
 | Quality examples and checks | `evals/README.md`, `evals/cases/`, `evals/fixtures/` | Evaluating workflows or agent behavior |
 | Backlog tasks | `backlog/README.md` | Running or resuming tasks |
