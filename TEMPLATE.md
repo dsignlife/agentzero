@@ -40,3 +40,6 @@ Consult only existing, relevant files.
 
 ## Instruction maintenance
 [Keep the shared section from the current AGENTS.md.]
+
+## Completion
+[Keep the shared section; add role-specific completion checks.]

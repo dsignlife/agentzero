@@ -2,7 +2,7 @@
 
 Use this folder for active task context that another session or agent needs to continue the work. Follow the shared [memory guidance](../README.md).
 
-Create a task note for work spanning sessions or requiring a handoff. Read it before resuming that task. Update it after a meaningful decision, change in status, or handoff; keep the current state instead of a running conversation log.
+[Backlog](../../backlog/README.md) tasks keep their state in their task folder; add a note here only to link to it. Create a task note for other work spanning sessions or requiring a handoff. Read it before resuming that task. Update it after a meaningful decision, change in status, or handoff; keep the current state instead of a running conversation log.
 
 Copy [TEMPLATE.md](TEMPLATE.md) to `<task-id>.md`.
 

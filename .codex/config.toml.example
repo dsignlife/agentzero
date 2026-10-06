@@ -1,0 +1,11 @@
+# Example project configuration for Codex. Inactive until copied to
+# .codex/config.toml. Keep only the settings this project needs, and keep
+# credentials in environment variables rather than in this file.
+
+# model = ""
+# approval_policy = "on-request"
+# sandbox_mode = "workspace-write"
+
+# [mcp_servers.example]
+# command = "npx"
+# args = ["-y", "example-mcp-server"]

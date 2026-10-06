@@ -19,10 +19,8 @@ Consult only existing, relevant files. Folders with a `TEMPLATE.md` use it for n
 | Domain facts and policies | `knowledge/INDEX.md`, then relevant source | The task needs domain information |
 | Specialist responsibilities | `roles/README.md` | Defining or assigning a specialist role |
 | Shared executable utilities | `tools/README.md`, `tools/` | Using or modifying shared utilities |
-| Memory usage and maintenance | `memory/README.md` | Reading or recording project memory |
-| Temporary task context and handoff | `memory/shorterm/README.md` | Resuming or coordinating longer work |
-| Durable project context | `memory/longterm/README.md` | Consulting maintained project decisions |
-| Reusable lessons | `memory/learnings/README.md` | Consulting relevant lessons |
+| Backlog tasks and iterations | `backlog/README.md` | Running or resuming a backlog task |
+| Task notes, decisions, and lessons | `memory/README.md`, then the folder's README | Reading or recording project memory |
 | Quality examples and checks | `evals/README.md`, `evals/cases/`, `evals/fixtures/` | Evaluating workflows or agent behavior |
 | Deliverables | `outputs/README.md`, `outputs/` | Writing or inspecting requested results |
 
@@ -39,7 +37,7 @@ Use each runner's supported configuration locations. Example files are inactive 
 
 - Read and update Markdown memory explicitly, following `memory/README.md` and the selected folder's README.
 - Search by topic or task; read only matching notes.
-- For longer work or handoffs, maintain one current record in `memory/shorterm/`. Simple tasks need no record.
+- For longer work or handoffs, keep one current record: a backlog task folder or a `memory/shorterm/` note. Simple tasks need none.
 - Preserve confirmed decisions in `memory/longterm/` and verified lessons in `memory/learnings/`. At completion, remove resolved scratch details; retain useful handoff context.
 - When delegating, specify each agent's task, owned files, inputs, output, and completion criteria. Use the runner's actual coordination mechanism.
 - Keep generated traces, caches, local databases, and credentials out of Git. Store reproducible evaluation cases separately from run results.

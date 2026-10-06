@@ -1,0 +1,35 @@
+{
+  "task": "<task-id>",
+  "iteration": 1,
+  "status": "planned",
+  "created": "YYYY-MM-DD",
+  "updated": "YYYY-MM-DD",
+  "task_sha256": "",
+  "previous_iteration": null,
+  "specialist": {
+    "runner": "",
+    "role": "",
+    "dispatch_ref": null
+  },
+  "acceptance": [
+    {
+      "id": "AC1",
+      "status": "unverified",
+      "evidence": [],
+      "note": ""
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/<file>",
+      "location": "local",
+      "note": ""
+    }
+  ],
+  "blockers": [],
+  "decision": {
+    "verdict": null,
+    "summary": "",
+    "next_action": ""
+  }
+}

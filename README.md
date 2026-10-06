@@ -36,8 +36,9 @@ guidance and existing project content.
 2. Customize every existing README listed in the root README for this role.
    Explain how its folder supports the project. Describe actual tools and
    workflows; clearly identify anything that is not configured yet.
-3. Update AGENTS.md, using TEMPLATE.md as its structure, so future sessions know the primary role, its scope,
-   expected outputs, relevant checks, and when to read supporting files.
+3. Update AGENTS.md, using TEMPLATE.md as its structure, so future sessions
+   know the primary role, its scope, expected outputs, relevant checks, and
+   when to read supporting files.
    Keep it under 600 words and link to details instead of duplicating them.
    Keep CLAUDE.md as the adapter to the shared instructions.
 4. Explain the role's use of short-term task memory, long-term decisions,
@@ -105,6 +106,7 @@ During initialization, the agent should customize these README files for its ass
 | [memory/longterm/README.md](memory/longterm/README.md) | When changing durable project memory | Describe which confirmed decisions to retain, supporting evidence, and review triggers. |
 | [memory/learnings/README.md](memory/learnings/README.md) | When changing how lessons are recorded | Describe verification, applicability, and how to update or retire lessons. |
 | [evals/README.md](evals/README.md) | When adding or changing evaluations | Explain the evaluation cases, how to run them, expected results, pass criteria, and where generated results are stored. |
+| [backlog/README.md](backlog/README.md) | When changing how tasks are prompted and iterated | Describe the task folder layout, iteration workflow, and `taskstate.json` fields. |
 | [outputs/README.md](outputs/README.md) | When defining project deliverables | Describe expected artifacts, their folder layout and naming, and which outputs should be committed to Git. |
 
 ## Templates
@@ -120,3 +122,4 @@ Copy a `TEMPLATE.md` when creating a new entry, then replace its bracketed text.
 | [memory/longterm/TEMPLATE.md](memory/longterm/TEMPLATE.md) | A durable decision | `memory/longterm/<topic>.md` |
 | [memory/learnings/TEMPLATE.md](memory/learnings/TEMPLATE.md) | A verified lesson | `memory/learnings/<lesson>.md` |
 | [outputs/TEMPLATE.md](outputs/TEMPLATE.md) | A requested result report | `outputs/<task-id>/result.md` |
+| [backlog/_template/](backlog/_template/) | A backlog task and its iterations | `backlog/<task-id>/`; see [backlog/README.md](backlog/README.md) |
