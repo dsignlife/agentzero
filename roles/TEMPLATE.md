@@ -2,9 +2,11 @@
 
 - Use when: [Specific task that benefits from this role.]
 - Responsibility: [One bounded outcome.]
+- Runner and tools: [Runner, MCP servers, or applications this role needs. Mark anything not yet configured.]
+- Skills: [Relevant skill paths, or none.]
 - Inputs: [Task brief and relevant source paths.]
 - Owned files: [Explicit assignment; avoid overlapping writers.]
 - Output: [Result format and destination.]
-- Completion: [Acceptance criteria.]
+- Completion: [Acceptance criteria and required evidence.]
 - Handoff: [Runner-supported return channel or agreed artifact path.]
 - Limits: [Task-specific restrictions; do not duplicate global instructions.]

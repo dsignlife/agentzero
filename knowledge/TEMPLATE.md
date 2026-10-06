@@ -4,6 +4,7 @@
 - Authority: [Authoritative document, system, or URL.]
 - Last verified: [YYYY-MM-DD.]
 - Scope: [Where these facts apply.]
+- Read when: [Task or question that needs this source.]
 
 ## Current facts
 [Concise, sourced facts. Separate confirmed facts from assumptions.]

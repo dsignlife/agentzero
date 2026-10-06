@@ -10,7 +10,7 @@ Memory preserves useful project context between tasks and across Codex and OpenC
 | [longterm/](longterm/README.md) | Durable project decisions, constraints, and confirmed preferences | A task depends on established project context |
 | [learnings/](learnings/README.md) | Verified lessons that improve future work | A similar problem or workflow comes up again |
 
-The existing folder name is `shorterm`; use that spelling in paths.
+The existing folder name is `shorterm`; use that spelling in paths. Each folder has a `TEMPLATE.md` for new notes.
 
 ## How agents use memory
 

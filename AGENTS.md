@@ -4,11 +4,11 @@
 This template supports Codex and OpenClaude with shared workflows, tools, knowledge, and memory. Load only relevant context. Add runtime code only for custom execution or coordination.
 
 ## Where to look
-Paths reflect the current repository, including empty scaffolds. Consult only existing, relevant files.
+Consult only existing, relevant files. Folders with a `TEMPLATE.md` use it for new entries.
 
 | Need | Location | Read when |
 | --- | --- | --- |
-| Shared instructions | `AGENTS.md` | Working in this repository |
+| Shared instructions | `AGENTS.md`; skeleton `TEMPLATE.md` | Working here; specializing this file |
 | OpenClaude instruction adapter | `CLAUDE.md` | Loading shared instructions through OpenClaude |
 | Codex configuration example | `.codex/config.toml.example` | Configuring Codex |
 | Codex skills | `.codex/skills/` | A skill's stated trigger matches the task |
@@ -17,7 +17,7 @@ Paths reflect the current repository, including empty scaffolds. Consult only ex
 | Environment-variable example | `.env.example` | Configuring dependencies or credentials |
 | Skill-specific helpers | That skill's `scripts/`, `references/`, `assets/` | The selected workflow requires them |
 | Domain facts and policies | `knowledge/INDEX.md`, then relevant source | The task needs domain information |
-| Specialist responsibilities | `roles/README.md`, `roles/TEMPLATE.md` | Defining or assigning a specialist role |
+| Specialist responsibilities | `roles/README.md` | Defining or assigning a specialist role |
 | Shared executable utilities | `tools/README.md`, `tools/` | Using or modifying shared utilities |
 | Memory usage and maintenance | `memory/README.md` | Reading or recording project memory |
 | Temporary task context and handoff | `memory/shorterm/README.md` | Resuming or coordinating longer work |

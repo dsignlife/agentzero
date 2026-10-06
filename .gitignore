@@ -19,6 +19,7 @@
 # Deliverables are opt-in commits
 outputs/*
 !outputs/README.md
+!outputs/TEMPLATE.md
 !outputs/.gitkeep
 
 # Dependencies, build products, and editor state
@@ -37,3 +38,8 @@ build/
 Thumbs.db
 .idea/
 .vscode/
+
+# Backlog tasks are local; keep the convention and template
+backlog/*
+!backlog/README.md
+!backlog/_template/
