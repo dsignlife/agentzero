@@ -1,0 +1,3 @@
+we are trying to use Codex agent that handle 3d blender work, it connects to local mcp server to control blender. And it has been failing to meet the expectation. Inside 3dobject1 folder, we have luffy-goal.png which is the goal of this project, to create a 3d object that looks like that. It has been struggling to make it. So the apparch is starting with white_mesh.glb which is the picture owns 3d printing object with just a strucutre and no color. we want the blender 3D to "color" and "cloth" our current model to look exactly as the picutre goal.
+
+I need you to give me a very detailed prompt for my codex to handle this job effectively.

@@ -19,6 +19,7 @@
 # Deliverables are opt-in commits
 outputs/*
 !outputs/README.md
+!outputs/TEMPLATE.md
 !outputs/.gitkeep
 
 # Dependencies, build products, and editor state

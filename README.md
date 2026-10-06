@@ -36,7 +36,7 @@ guidance and existing project content.
 2. Customize every existing README listed in the root README for this role.
    Explain how its folder supports the project. Describe actual tools and
    workflows; clearly identify anything that is not configured yet.
-3. Update AGENTS.md so future sessions know the primary role, its scope,
+3. Update AGENTS.md, using TEMPLATE.md as its structure, so future sessions know the primary role, its scope,
    expected outputs, relevant checks, and when to read supporting files.
    Keep it under 600 words and link to details instead of duplicating them.
    Keep CLAUDE.md as the adapter to the shared instructions.
@@ -46,8 +46,9 @@ guidance and existing project content.
    do not create fictional task histories or lessons.
 5. Keep domain references in knowledge, reusable procedures in skills,
    shared utilities in tools, and requested artifacts in outputs. Document
-   the primary role in roles/README.md; add specialist role definitions only
-   when the project needs them.
+   the primary role in roles/README.md; add specialist role definitions from
+   roles/TEMPLATE.md only when the project needs them. Keep every TEMPLATE.md
+   file generic so it can be reused for new entries.
 6. Check that documentation links and repository paths resolve, that the
    READMEs and AGENTS.md agree, and that AGENTS.md meets its word limit.
 
@@ -105,3 +106,17 @@ During initialization, the agent should customize these README files for its ass
 | [memory/learnings/README.md](memory/learnings/README.md) | When changing how lessons are recorded | Describe verification, applicability, and how to update or retire lessons. |
 | [evals/README.md](evals/README.md) | When adding or changing evaluations | Explain the evaluation cases, how to run them, expected results, pass criteria, and where generated results are stored. |
 | [outputs/README.md](outputs/README.md) | When defining project deliverables | Describe expected artifacts, their folder layout and naming, and which outputs should be committed to Git. |
+
+## Templates
+
+Copy a `TEMPLATE.md` when creating a new entry, then replace its bracketed text. Keep the templates generic so every new agent or entry starts from the same structure.
+
+| Template | Creates | Copy to |
+| --- | --- | --- |
+| [TEMPLATE.md](TEMPLATE.md) | A specialized agent guide | `AGENTS.md`, during initialization |
+| [roles/TEMPLATE.md](roles/TEMPLATE.md) | A specialist role definition | `roles/<role-name>.md` |
+| [knowledge/TEMPLATE.md](knowledge/TEMPLATE.md) | A domain reference | `knowledge/<topic>.md`, indexed in `knowledge/INDEX.md` |
+| [memory/shorterm/TEMPLATE.md](memory/shorterm/TEMPLATE.md) | An active task note | `memory/shorterm/<task-id>.md` |
+| [memory/longterm/TEMPLATE.md](memory/longterm/TEMPLATE.md) | A durable decision | `memory/longterm/<topic>.md` |
+| [memory/learnings/TEMPLATE.md](memory/learnings/TEMPLATE.md) | A verified lesson | `memory/learnings/<lesson>.md` |
+| [outputs/TEMPLATE.md](outputs/TEMPLATE.md) | A requested result report | `outputs/<task-id>/result.md` |

@@ -5,4 +5,4 @@ No domain sources have been added yet. Add only maintained references relevant t
 | Topic | Source path | Read when | Owner | Last reviewed |
 | --- | --- | --- | --- | --- |
 
-Use TEMPLATE.md to structure a new reference when needed. Verify time-sensitive claims against the authoritative source before relying on them.
+To add a reference, copy [TEMPLATE.md](TEMPLATE.md) to `knowledge/<topic>.md` and add a row above. Verify time-sensitive claims against the authoritative source before relying on them.
