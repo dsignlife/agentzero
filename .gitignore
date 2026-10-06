@@ -37,3 +37,6 @@ build/
 Thumbs.db
 .idea/
 .vscode/
+
+#Local Files
+backlog/
