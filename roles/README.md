@@ -46,4 +46,4 @@ Read the artifacts and check the supplied evidence against the assignment and ov
 
 If a capability or return channel is missing, mark the brief `awaiting dispatch` and identify what is needed. Do not record an unexecuted task as completed.
 
-Use [TEMPLATE.md](TEMPLATE.md) when a recurring specialist needs a separate role definition. The role table and per-task briefs cover this initialization; no specialist agent has been launched or registered by these documents.
+When a recurring specialist needs a separate role definition, copy [TEMPLATE.md](TEMPLATE.md) to `roles/<role-name>.md` and link it from the table above. The role table and per-task briefs cover this initialization; no specialist agent has been launched or registered by these documents.

@@ -10,7 +10,7 @@ Memory preserves the Director's coordination context between tasks and across Co
 | [longterm/](longterm/README.md) | Confirmed preferences, project decisions, and established coordination conventions | Planning depends on durable context |
 | [learnings/](learnings/README.md) | Verified lessons from planning and specialist work | Reviewing a similar solution, assignment, or result |
 
-The existing folder name is `shorterm`; use that spelling in paths.
+The existing folder name is `shorterm`; use that spelling in paths. Each folder has a `TEMPLATE.md` for new notes.
 
 ## How agents use memory
 
