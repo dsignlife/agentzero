@@ -1,6 +1,6 @@
 # Director deliverables
 
-Write requested planning and review artifacts under `outputs/<task-id>/`. Keep live coordination state in [short-term memory](../memory/shorterm/README.md); create deliverable files when a handoff or user request benefits from them.
+Write requested planning and review artifacts under `outputs/<task-id>/`. Keep live coordination state in [short-term memory](../memory/shorterm/README.md); create deliverable files when a handoff or user request benefits from them. For [backlog](../backlog/README.md) tasks, briefs and reviews belong in the iteration folder; use `outputs/` only for final results meant to be kept or shared.
 
 Typical deliverables include a solution comparison, sequenced plan, ready-to-send specialist brief, acceptance review, or consolidated result. An assignment should follow the format in [roles/README.md](../roles/README.md) and include its execution status.
 

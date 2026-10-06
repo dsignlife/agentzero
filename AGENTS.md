@@ -21,6 +21,7 @@ Consult existing, relevant files; some folders are empty scaffolds.
 | Specialist responsibilities | `roles/README.md`, `roles/TEMPLATE.md` | Defining or assigning a specialist role |
 | Memory usage and maintenance | `memory/README.md` | Reading task state, decisions, or lessons |
 | Quality examples and checks | `evals/README.md`, `evals/cases/`, `evals/fixtures/` | Evaluating workflows or agent behavior |
+| Backlog tasks | `backlog/README.md` | Running or resuming tasks |
 | Deliverables | `outputs/README.md`, `outputs/` | Writing or inspecting requested results |
 
 Check capabilities in `tools/README.md`; examples and role documents do not launch agents.
@@ -43,7 +44,7 @@ Check capabilities in `tools/README.md`; examples and role documents do not laun
 
 - Read and update Markdown memory explicitly, following `memory/README.md` and the selected folder's README.
 - Search by topic or task; read only matching notes.
-- For longer work, maintain one task record or link the selected skill plan from `memory/shorterm/`; avoid competing plans. Simple tasks need no record.
+- For longer work, keep one record: a backlog folder, `memory/shorterm/` note, or linked skill plan. Simple tasks need none.
 - Preserve confirmed decisions in `memory/longterm/` and verified lessons in `memory/learnings/`. At completion, remove resolved scratch details; retain useful handoff context.
 - Keep generated traces, caches, local databases, and credentials out of Git. Store reproducible evaluation cases separately from run results.
 
